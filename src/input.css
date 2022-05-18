@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* how to modify style that exist in tailwind  */
+@layer base {
+  a,
+  p,
+  h2,
+  h3,
+  h1,
+  label,
+  input {
+    @apply font-open text-fillprimary;
+  }
+}
+@layer components {
+  .link-hover {
+    @apply hover:text-blue-500;
+  }
+}
+@layer utilities {
+  .font-semibold {
+    @apply font-extrabold;
+  }
+}
+.icon-btn {
+  @apply h-6 w-6 fill-fillprimary/60 hover:bg-white rounded-full hover:fill-fillprimary hover:scale-125 hover:ease-in-out  duration-200;
+}
